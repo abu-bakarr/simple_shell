@@ -51,5 +51,5 @@ Simple Shell A shell is a command line interface (CLI) program that takes comman
 * `write` (man 2 write)
 
 # Authors 
-`abu-bakarr` => Abubakarr Bangura and
-`Viowiti` => Victor Owiti
+- [] `abu-bakarr` => Abubakarr Bangura and
+- [] `Viowiti` => Victor Owiti
