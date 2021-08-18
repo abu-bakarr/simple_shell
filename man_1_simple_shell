@@ -1,0 +1,54 @@
+.TH man 1 "18 august 2021" "HOLBERTON SCHOOL" "SIMPLE_SHELL"
+.SH NAME
+.B simple_shell
+- a simple UNIX command interpreter
+.SH SYNOPSIS
+.B #include \(dqhead.h(dq
+.sp
+.B int hsh(void)
+.SH DESCRIPTION
+.B Overview
+.sp
+The simple shell is an application that reads lines from either a file or the terminal, interprets them, and excutes them. can interactively type directly to the
+running shell or pipe in shell scripts.
+.sp
+.B Invocation
+.sp
+If no args are present and if the standard input of the shell is connected to a terminal, the shell is considered an interactive shell.  AN interactive shell prompts before each command and handles programming and command errors diferently.
+.sp
+.B Builtins
+.sp
+This section lists the builtin commands which are builtin because they need to perfomr some operation that can be performed by a separated process.
+.sp
+.IP "-exit [status]"
+.sp
+Terminate the shell process. If status is given, it is used as the exit status of the shell; otherwise the exit status of the the preceding command is used.
+.sp
+.IP "-help [builtin]"
+.sp
+Retrieve informational text on how use builtin
+.sp
+.IP "-unsetenv [variable]"
+.sp
+Unsets an enviromental variable of name [variable]
+.sp
+.IP "-setenv [key] [value]"
+.sp
+Set a local enviromental variable with key-value pair. If key already exits, this action will replace the existing key with new value.
+.sp
+.SH EXIT STATUS
+.sp
+Errors that are detected by the shell, such as syntax error, will cause  the shell to exit with a non-zero exit status. Otherwise the shell will returbn the exit status of the last command executed, or if the exit builtin is used with a numeric argument, it will return the argument.
+.sp
+.SH ENVIROMENT
+.sp
+.IP PATH
+The default search path for executables
+.sp
+.IP PS1
+The primary prompt string, which defaults to "$ "
+.SH FILES
+.SH BUGS
+.ip EXpansions only work once per stdin read
+.SH AUTHOR
+Abubakarr Bangura and Victor Owiti
